@@ -1,0 +1,9 @@
+try {
+   int d = 2;
+   double catchedRes1 = intArray[7] / d;
+   System.out.println("catchedRes1 = " + catchedRes1);
+} catch (ArrayIndexOutBoundsException e) {
+   System.out.println("Catching exception: " + e);
+} catch (ArithmeticException e) {
+   System.out.println("Catching exception: " + e);
+}
