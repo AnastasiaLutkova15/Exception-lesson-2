@@ -1,0 +1,28 @@
+```
+import java.util.Scanner;
+
+public class program {
+    public static void main(String[] args) {
+        float number = getFloatingPointNumber();
+        System.out.println("Вы ввели число: " + number);
+    }
+
+    public static float getFloatingPointNumber() {
+        Scanner scanner = new Scanner(System.in);
+        float number = 0f;
+        boolean validInput = false;
+
+        while (!validInput) {
+            System.out.print("Введите дробное число: ");
+            if (scanner.hasNextFloat()) {
+                number = scanner.nextFloat();
+                validInput = true;
+            } else {
+                System.out.println("Ошибка ввода! Пожалуйста, введите дробное число");
+                scanner.next();
+            }
+        }
+        return number;
+    }
+}
+```
